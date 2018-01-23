@@ -1,5 +1,5 @@
 const jsonplaceholder = 'https://jsonplaceholder.typicode.com/photos'
-var albumId = 1
+let albumId = 1
 
 function nextAlbum() {
     albumId += 1;
