@@ -1,6 +1,5 @@
-var jsonplaceholder = 'https://jsonplaceholder.typicode.com/photos'
+const jsonplaceholder = 'https://jsonplaceholder.typicode.com/photos'
 var albumId = 1
-var fullImage = ''
 
 function nextAlbum() {
     albumId += 1;
@@ -30,7 +29,7 @@ function fetchFullAlbum(albumId) {
         url: jsonplaceholder,
         type: 'GET',
         success: function(data) {
-            for (i = 0; i < data.length; i++) { 
+            for (let i = 0; i < data.length; i++) { 
                 localAlbumId = data[i].albumId
                 if(localAlbumId == albumId) {
                     console.log('album id: ' + localAlbumId + ' image id: '+ i);
@@ -57,16 +56,3 @@ function showFullImage(imageUrl, imageTitle) {
 function hideFullImage() {
     $('#fullImage').slideUp().empty();
 }
-
-//function getUrlVars()
-//{
-//    var vars = [], hash;
-//    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-//    for(var i = 0; i < hashes.length; i++)
-//    {
-//        hash = hashes[i].split('=');
-//        vars.push(hash[0]);
-//        vars[hash[0]] = hash[1];
-//    }
-//    return vars;
-//}

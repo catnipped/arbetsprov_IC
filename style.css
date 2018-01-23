@@ -34,6 +34,16 @@ span:first-letter {
     z-index: 9;
 }
 
+#previous {
+    left: 0; 
+    border-radius: 0 0 3px 0;
+}
+
+#next {
+    right: 0; 
+    border-radius: 0 0 0 3px;
+}
+
 #menu span:hover {
     background: black;
     cursor: pointer;
@@ -77,8 +87,8 @@ span:first-letter {
     margin-left: 1vh;
     margin-bottom: 1vh;
     margin-top: 0px;
-    max-height: 150px;
-    max-width: 150px;
+    height: 150px;
+    width: 150px;
     overflow: hidden;
     border-radius: 3px;
 }
