@@ -7,7 +7,8 @@ function nextAlbum() {
     if (albumId > 100) {
         albumId = 1;
     }
-    fetchFullAlbum(albumId);
+    updateAlbumId();
+    fetchFullAlbum(albumId);  
 };
 
 function previousAlbum() {
@@ -15,7 +16,12 @@ function previousAlbum() {
     if (albumId < 1) {
         albumId = 100;
     };
+    updateAlbumId();
     fetchFullAlbum(albumId);
+};
+
+function updateAlbumId() {
+    $('#albumId').text('📒 Album: '+ albumId);
 };
 
 function fetchFullAlbum(albumId) {
@@ -45,7 +51,7 @@ function addThumbnail(image) {
 function showFullImage(imageUrl, imageTitle) {
     hideFullImage();
     console.log(imageUrl + ' ' + imageTitle)
-    $('#fullImage').append('<span>' + imageTitle + '</span><img src="' + imageUrl + '"/>').css('display', 'block');
+    $('#fullImage').append('<img src="' + imageUrl + '"/><br/><span>' + imageTitle + '</span>').css('display', 'block');
 }
 
 function hideFullImage() {

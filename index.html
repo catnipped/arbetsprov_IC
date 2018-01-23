@@ -10,10 +10,12 @@
         <link href="style.css" type="text/css" rel="stylesheet">
 	</head>
 
-	<body onload="fetchFullAlbum(albumId)">
+	<body onload="fetchFullAlbum(albumId); updateAlbumId();">
+        <span id="albumId"></span>
         <div id="menu">
-            <a href="#" onclick="previousAlbum()">previous</a>
-            <a href="#" onclick="nextAlbum()">next</a>
+            <span onclick="previousAlbum()" style="left:0;">👈 Previous</span>
+          
+            <span onclick="nextAlbum()"  style="right: 0;">Next 👉 </span>
         </div>
         <div id="fullImage" onclick="hideFullImage()">
         </div>

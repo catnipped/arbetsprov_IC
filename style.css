@@ -1,25 +1,61 @@
 @import url('https://fonts.googleapis.com/css?family=Supermercado+One');
+
 body {
     font-family: 'Supermercado One';
-    background-color: whitesmoke;
-    font-size: 3vh;
+    background-color: white;
+    font-size: 24px;
+    margin: 0;
+}
+
+#albumId {
+    color: black;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+    padding: 1vw;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
+}
+
+span:first-letter {
+    text-transform: uppercase;
+}
+
+#menu span {
+    display: block;
+    position: fixed;
+    top:0;
+    background: rgba(0,0,0,0.7);
+    text-shadow: 2px 2px 0px black;
+    color: white;
+    padding: 1vw;
+    z-index: 9;
+}
+
+#menu span:hover {
+    background: black;
+    cursor: pointer;
 }
 
 #thumbnails {
     margin-top: 1vh;
     margin-bottom: 5vh;
-    max-width: 80vw;
-    display: inline-block;
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .thumbnail span {
     display: none;
 }
 
+.thumbnail:hover {
+    cursor: pointer;
+}
+
+
 .thumbnail:hover span {
     display: block;
-    position: absolute;
     max-width: 130px;
     max-height: 130px;
     overflow: hidden;
@@ -27,9 +63,10 @@ body {
     margin: 10px;
     color: white;
     font-size: 16px;
+    text-shadow: 2px 2px 0px black;
 }
 .thumbnail {
-    float: left;
+    display: inline;
     margin-left: 10px;
     margin-bottom: 10px;
     max-height: 150px;
@@ -52,7 +89,19 @@ body {
     height: 100%;
     z-index: 10;
 }
+
+#fullImage span {
+    color: white;
+    text-shadow: 3px 3px 0px black;
+    max-width: 600px;
+    width: 80vw;
+    display: inline-block;
+    margin-top: 1vh;
+    text-align: left;
+}
+
 #fullImage img {
     max-width: 80vw;
     max-height: 80vh;
+    margin-top: 10vh;
 }
