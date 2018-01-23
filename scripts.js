@@ -21,7 +21,7 @@ function previousAlbum() {
 };
 
 function updateAlbumId() {
-    $('#albumId').text('📒 Album: '+ albumId);
+    $('#albumId').text('📒  '+ albumId);
 };
 
 function fetchFullAlbum(albumId) {
@@ -51,11 +51,11 @@ function addThumbnail(image) {
 function showFullImage(imageUrl, imageTitle) {
     hideFullImage();
     console.log(imageUrl + ' ' + imageTitle)
-    $('#fullImage').append('<img src="' + imageUrl + '"/><br/><span>' + imageTitle + '</span>').css('display', 'block');
+    $('#fullImage').slideDown().append('<img src="' + imageUrl + '"/><br/><span>' + imageTitle + '</span>').css('display', 'block');
 }
 
 function hideFullImage() {
-    $('#fullImage').empty().css('display', 'none');
+    $('#fullImage').slideUp().empty();
 }
 
 //function getUrlVars()

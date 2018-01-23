@@ -1,15 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Supermercado+One');
+@import url('https://fonts.googleapis.com/css?family=Concert+One');
 
 body {
-    font-family: 'Supermercado One';
+    font-family: 'Concert One';
     background-color: whitesmoke;
     font-size: 24px;
     margin: 0;
+    -webkit-font-smoothing: antialiased
 }
 
+
+
 #albumId {
-    color: hotpink;
-    text-shadow: 2px 2px 0px rgba(0,0,0,0.7);
+    color: black;
     padding: 10px;
     display:block;
     margin-left: auto;
@@ -46,16 +48,13 @@ span:first-letter {
     margin-right: auto;
 }
 
-.thumbnail span {
-    display: none;
-}
+
 
 .thumbnail:hover {
     cursor: pointer;
 }
 
-
-.thumbnail:hover span {
+.thumbnail span {
     display: inline-block;
     position: absolute;
     max-width: 130px;
@@ -64,9 +63,14 @@ span:first-letter {
     margin: 10px;
     margin-left: -140px;
     color: white;
-    font-size: 16px;
+    font-size: 18px;
     text-shadow: 2px 2px 0px black;
 }
+
+.thumbnail:hover span {
+    display: inline-block;
+}
+
 .thumbnail {
     display: block;
     float: left;
@@ -76,6 +80,7 @@ span:first-letter {
     max-height: 150px;
     max-width: 150px;
     overflow: hidden;
+    border-radius: 3px;
 }
 
 .thumbnail img {
@@ -109,4 +114,24 @@ span:first-letter {
     max-width: 80vw;
     max-height: 80vh;
     margin-top: 10vh;
+}
+
+@media screen and (min-width: 800px) {
+    .thumbnail span {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #thumbnails {
+        text-align: center;
+    }
+    .thumbnail {
+        display: inline;
+        float: none;
+        text-align: left;
+    }
+    body {
+        margin-top: 60px;
+    }
 }
