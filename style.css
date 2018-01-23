@@ -2,15 +2,15 @@
 
 body {
     font-family: 'Supermercado One';
-    background-color: white;
+    background-color: whitesmoke;
     font-size: 24px;
     margin: 0;
 }
 
 #albumId {
-    color: black;
-    text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
-    padding: 1vw;
+    color: hotpink;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.7);
+    padding: 10px;
     display:block;
     margin-left: auto;
     margin-right: auto;
@@ -25,10 +25,10 @@ span:first-letter {
     display: block;
     position: fixed;
     top:0;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.5);
     text-shadow: 2px 2px 0px black;
     color: white;
-    padding: 1vw;
+    padding: 10px;
     z-index: 9;
 }
 
@@ -40,7 +40,8 @@ span:first-letter {
 #thumbnails {
     margin-top: 1vh;
     margin-bottom: 5vh;
-    display: inline;
+    display: block;
+    max-width: 80vw;
     margin-left: auto;
     margin-right: auto;
 }
@@ -55,20 +56,23 @@ span:first-letter {
 
 
 .thumbnail:hover span {
-    display: block;
+    display: inline-block;
+    position: absolute;
     max-width: 130px;
     max-height: 130px;
     overflow: hidden;
-    text-align: left;
     margin: 10px;
+    margin-left: -140px;
     color: white;
     font-size: 16px;
     text-shadow: 2px 2px 0px black;
 }
 .thumbnail {
-    display: inline;
-    margin-left: 10px;
-    margin-bottom: 10px;
+    display: block;
+    float: left;
+    margin-left: 1vh;
+    margin-bottom: 1vh;
+    margin-top: 0px;
     max-height: 150px;
     max-width: 150px;
     overflow: hidden;
@@ -88,6 +92,7 @@ span:first-letter {
     width: 100%;
     height: 100%;
     z-index: 10;
+    text-align: center;
 }
 
 #fullImage span {

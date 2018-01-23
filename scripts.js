@@ -45,7 +45,7 @@ function fetchFullAlbum(albumId) {
 };
 
 function addThumbnail(image) {
-  $('#thumbnails').append('<div class="thumbnail" onclick="showFullImage(\'' + image.url + '\', \'' + image.title + '\')"><span>' + image.title + '</span><img src="' + image.thumbnailUrl + '"/></div>' )
+  $('#thumbnails').append('<div class="thumbnail" onclick="showFullImage(\'' + image.url + '\', \'' + image.title + '\')"><img src="' + image.thumbnailUrl + '"/><span>' + image.title + '</span></div>' )
 };
 
 function showFullImage(imageUrl, imageTitle) {
