@@ -45,11 +45,11 @@ function addThumbnail(image) {
 function showFullImage(imageUrl, imageTitle) {
     hideFullImage();
     console.log(imageUrl + ' ' + imageTitle)
-    $('#fullImage').append('<span>' + imageTitle + '</span><img src="' + imageUrl + '"/>');
+    $('#fullImage').append('<span>' + imageTitle + '</span><img src="' + imageUrl + '"/>').css('display', 'block');
 }
 
 function hideFullImage() {
-    $('#fullImage').empty();
+    $('#fullImage').empty().css('display', 'none');
 }
 
 //function getUrlVars()
