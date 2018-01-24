@@ -44,13 +44,13 @@ function fetchFullAlbum(albumId) {
 };
 
 function addThumbnail(image) {
-  $('#thumbnails').append('<div class="thumbnail" onclick="showFullImage(\'' + image.url + '\', \'' + image.title + '\')"><img src="' + image.thumbnailUrl + '"/><span>' + image.title + '</span></div>' )
+  $('#thumbnails').append('<div class="thumbnail" onclick="showFullImage(\'' + image.url + '\', \'' + image.title + '\', \'' + image.id + '\')"><img src="' + image.thumbnailUrl + '"/><span>' + image.title + '</span></div>' )
 };
 
-function showFullImage(imageUrl, imageTitle) {
+function showFullImage(imageUrl, imageTitle, imageID) {
     hideFullImage();
     console.log(imageUrl + ' ' + imageTitle)
-    $('#fullImage').slideDown().append('<img src="' + imageUrl + '"/><br/><span>' + imageTitle + '</span>').css('display', 'block');
+    $('#fullImage').slideDown().append('<span>🖼️ ' + imageID + '</span><br/><img src="' + imageUrl + '"/><span>' + imageTitle + '</span>').css('display', 'block');
 }
 
 function hideFullImage() {
