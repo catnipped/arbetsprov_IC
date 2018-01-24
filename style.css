@@ -139,7 +139,7 @@ span:first-letter {
         text-align: center;
     }
     .thumbnail {
-        display: inline;
+        display: block;
         float: none;
     }
     
